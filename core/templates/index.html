@@ -3,103 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SMIA</title>
+    <title>SMIA Dashboard</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+
+        body{
+            background-color:#eef2f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .sidebar{
+            width:250px;
+            height:100vh;
+            position:fixed;
+            background:linear-gradient(180deg,#014421,#026937);
+            color:white;
+            padding-top:20px;
+        }
+
+        .sidebar h2{
+            text-align:center;
+            margin-bottom:40px;
+            font-weight:bold;
+        }
+
+        .sidebar a{
+            display:block;
+            color:white;
+            text-decoration:none;
+            padding:15px 25px;
+            transition:0.3s;
+            font-size:17px;
+        }
+
+        .sidebar a:hover{
+            background:#0b6b3a;
+        }
+
+        .main{
+            margin-left:250px;
+            padding:25px;
+        }
+
+        .topbar{
+            background:white;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom:25px;
+        }
+
+        .card-custom{
+            background:white;
+            border-radius:15px;
+            padding:25px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card-custom:hover{
+            transform:translateY(-5px);
+        }
+
+        .metric{
+            font-size:40px;
+            font-weight:bold;
+        }
+
+        .section-box{
+            background:white;
+            border-radius:15px;
+            padding:20px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        table{
+            margin-top:15px;
+        }
+
+    </style>
+
 </head>
-<body class="bg-light">
 
-    <nav class="navbar navbar-dark bg-success">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">
-                SMIA - Sistema Municipal de Información Ambiental
-            </span>
-        </div>
-    </nav>
+<body>
 
-    <div class="container mt-4">
+    <div class="sidebar">
 
-        <div class="row">
+        <h2>🌿 SMIA</h2>
 
-            <div class="col-md-3">
-                <div class="card text-bg-primary mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">PM2.5</h5>
-                        <p class="card-text">35 µg/m³</p>
-                    </div>
-                </div>
-            </div>
+        <a href="#">🏠 Dashboard</a>
+        <a href="#">📍 Estaciones</a>
+        <a href="#">📊 Monitoreo</a>
+        <a href="#">🗺️ Mapas</a>
+        <a href="#">📄 Reportes</a>
+        <a href="#">🚨 Alertas</a>
+        <a href="#">⚙️ Administración</a>
 
-            <div class="col-md-3">
-                <div class="card text-bg-warning mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">PM10</h5>
-                        <p class="card-text">52 µg/m³</p>
-                    </div>
-                </div>
-            </div>
+    </div>
 
-            <div class="col-md-3">
-                <div class="card text-bg-danger mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">NO2</h5>
-                        <p class="card-text">18 ppm</p>
-                    </div>
-                </div>
-            </div>
+    <div class="main">
 
-            <div class="col-md-3">
-                <div class="card text-bg-success mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Estaciones</h5>
-                        <p class="card-text">12 activas</p>
-                    </div>
-                </div>
-            </div>
+        <div class="topbar">
+
+            <h3>Sistema Municipal de Información Ambiental</h3>
+
+            <p>
+                Gobierno Autónomo Municipal de La Paz
+            </p>
 
         </div>
 
-        <div class="card mt-4">
-            <div class="card-header">
-                Monitoreo Ambiental
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="card-custom">
+                    <h5>PM2.5</h5>
+                    <div class="metric text-success">35</div>
+                    <p>Calidad moderada</p>
+                </div>
             </div>
 
-            <div class="card-body">
-                <p>
-                    Bienvenido al Sistema Municipal de Información Ambiental del Gobierno Autónomo Municipal de La Paz.
-                </p>
-
-                <table class="table table-striped">
-
-                    <thead>
-                        <tr>
-                            <th>Estación</th>
-                            <th>PM2.5</th>
-                            <th>PM10</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Cotahuma</td>
-                            <td>30</td>
-                            <td>48</td>
-                            <td>Normal</td>
-                        </tr>
-
-                        <tr>
-                            <td>Lanza</td>
-                            <td>41</td>
-                            <td>59</td>
-                            <td>Moderado</td>
-                        </tr>
-                    </tbody>
-
-                </table>
+            <div class="col-md-3">
+                <div class="card-custom">
+                    <h5>PM10</h5>
+                    <div class="metric text-primary">52</div>
+                    <p>Calidad moderada</p>
+                </div>
             </div>
+
+            <div class="col-md-3">
+                <div class="card-custom">
+                    <h5>NO2</h5>
+                    <div class="metric text-warning">18</div>
+                    <p>Calidad buena</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card-custom">
+                    <h5>Estaciones</h5>
+                    <div class="metric text-danger">12</div>
+                    <p>Activas</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-4 g-4">
+
+            <div class="col-md-8">
+
+                <div class="section-box">
+
+                    <h4>Mapa Ambiental</h4>
+
+                    <img
+                    src="/static/imagenlapaz.jpg"
+                    class="img-fluid rounded">
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="section-box">
+
+                    <h4>Estado Ambiental</h4>
+
+                    <img
+                    src="https://quickchart.io/chart?c={type:'doughnut',data:{labels:['Buena','Moderada','Alta'],datasets:[{data:[55,30,15]}]}}"
+                    class="img-fluid">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="section-box mt-4">
+
+            <h4>Últimas Mediciones</h4>
+
+            <table class="table table-striped">
+
+                <thead>
+
+                    <tr>
+                        <th>Estación</th>
+                        <th>PM2.5</th>
+                        <th>PM10</th>
+                        <th>NO2</th>
+                        <th>Estado</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Cotahuma</td>
+                        <td>30</td>
+                        <td>48</td>
+                        <td>12</td>
+                        <td class="text-success">Normal</td>
+                    </tr>
+
+                    <tr>
+                        <td>Lanza</td>
+                        <td>41</td>
+                        <td>59</td>
+                        <td>15</td>
+                        <td class="text-warning">Moderado</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sopocachi</td>
+                        <td>28</td>
+                        <td>45</td>
+                        <td>10</td>
+                        <td class="text-success">Bueno</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
         </div>
 
     </div>
